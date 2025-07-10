@@ -17,12 +17,14 @@ A simple, fast, and minimal command-line To-Do application built with Node.js.
 Make sure Node.js is installed.
 
 ```bash
-git clone https://github.com/your-username/todo-cli.git
+git clone https://github.com/TASh7899/todo-cli-app.git
 cd todo-cli
 npm install
 npm link  #enables `todo` command globally
+```
 
 ---
+```
 
 ## Usage
 
@@ -40,7 +42,7 @@ todo --help
 
 ## Available Commands
 
-### ➕ `todo add <description>`
+### `todo add <description>`
 
 **Alias:** `a`
 **Adds a new task to your to-do list.**
@@ -105,4 +107,4 @@ todo --version
 
 ## Screenshot
 
-![todo-screenshot][img/todo.png]
+![todo-screenshot](img/todo.png)
