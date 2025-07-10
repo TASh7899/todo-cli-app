@@ -1,0 +1,19 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "description": "A simple CLI todo application",
+  "type": "module",
+  "bin": {
+    "todo": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["todo", "cli"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.0.1",
+    "chalk": "^5.0.0"
+  }
+}

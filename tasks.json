@@ -1,0 +1,18 @@
+[
+  {
+    "description": "do leetcode question",
+    "completed": false
+  },
+  {
+    "description": "do as much react",
+    "completed": false
+  },
+  {
+    "description": "do some nasm",
+    "completed": false
+  },
+  {
+    "description": "do some art",
+    "completed": false
+  }
+]

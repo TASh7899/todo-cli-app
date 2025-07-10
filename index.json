@@ -1,0 +1,102 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const yargs = require('yargs');
+const { hideBin } = require('yargs/helpers');
+const chalk = require('chalk');
+
+const dataFile = path.join(__dirname, 'tasks.json');
+
+function loadTasks() {
+  try {
+    const data = fs.readFileSync(dataFile, 'utf-8');
+    return JSON.parse(data);
+  } catch (err) {
+    return [];
+  }
+}
+
+function saveTasks(tasks) {
+  fs.writeFileSync(dataFile, JSON.stringify(tasks, null, 2), 'utf-8');
+}
+
+yargs(hideBin(process.argv))
+  .command(
+    'add <description>',
+    'Add a new task',
+    (yargs) => {
+      yargs.positional('description', {
+        describe: 'Task description',
+        type: 'string'
+      });
+    },
+    (argv) => {
+      const tasks = loadTasks();
+      tasks.push({ id: Date.now(), description: argv.description, completed: false });
+      saveTasks(tasks);
+      console.log(chalk.green('Task added:'), argv.description);
+    }
+  )
+  .command(
+    'list',
+    'List all tasks',
+    () => {},
+    () => {
+      const tasks = loadTasks();
+      if (!tasks.length) {
+        console.log(chalk.yellow('No tasks found.'));
+        return;
+      }
+      tasks.forEach((task, index) => {
+        const symbol = task.completed ? chalk.green('[✔]') : chalk.red('[ ]');
+        console.log(
+          `${symbol} ${index + 1}. ${task.description} (id: ${task.id})`
+        );
+      });
+    }
+  )
+  .command(
+    'complete <id>',
+    'Mark a task as completed',
+    (yargs) => {
+      yargs.positional('id', { describe: 'Task ID', type: 'number' });
+    },
+    (argv) => {
+      const tasks = loadTasks();
+      const task = tasks.find(t => t.id === argv.id);
+      if (!task) {
+        console.log(chalk.red('Task not found.'));
+        return;
+      }
+      task.completed = true;
+      saveTasks(tasks);
+      console.log(chalk.green('Task marked as completed:'), task.description);
+    }
+  )
+  .command(
+    'remove <id>',
+    'Remove a task',
+    (yargs) => {
+      yargs.positional('id', { describe: 'Task ID', type: 'number' });
+    },
+    (argv) => {
+      let tasks = loadTasks();
+      const initialLen = tasks.length;
+      tasks = tasks.filter(t => t.id !== argv.id);
+      if (tasks.length === initialLen) {
+        console.log(chalk.red('Task not found.'));
+        return;
+      }
+      saveTasks(tasks);
+      console.log(chalk.green('Task removed.'));
+    }
+  )
+  .demandCommand()
+  .help()
+  .argv;
+
+// Ensure tasks file exists
+if (!fs.existsSync(dataFile)) {
+  saveTasks([]);
+}
+
