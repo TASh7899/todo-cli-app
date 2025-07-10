@@ -1,5 +1,4 @@
 
-````markdown
 # Todo CLI App
 
 A simple, fast, and minimal command-line To-Do application built with Node.js.
@@ -25,7 +24,6 @@ git clone https://github.com/TASh7899/todo-cli-app.git
 cd todo-cli-app
 npm install
 npm link  # Enables `todo` command globally
-````
 
 ---
 
