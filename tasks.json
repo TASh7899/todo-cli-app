@@ -1,18 +1,14 @@
 [
   {
-    "description": "do leetcode question",
+    "description": "bye milk - 1ltr",
     "completed": false
   },
   {
-    "description": "do as much react",
+    "description": "go to gym at 5pm",
     "completed": false
   },
   {
-    "description": "do some nasm",
-    "completed": false
-  },
-  {
-    "description": "do some art",
+    "description": "make a chocolate cake at 3am",
     "completed": false
   }
 ]
