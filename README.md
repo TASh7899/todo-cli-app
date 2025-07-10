@@ -1,6 +1,10 @@
-# 📝 Todo CLI App
+
+````markdown
+# Todo CLI App
 
 A simple, fast, and minimal command-line To-Do application built with Node.js.
+
+---
 
 ## Features
 
@@ -12,19 +16,18 @@ A simple, fast, and minimal command-line To-Do application built with Node.js.
 
 ---
 
-## 📦 Installation
+## Installation
 
 Make sure Node.js is installed.
 
 ```bash
 git clone https://github.com/TASh7899/todo-cli-app.git
-cd todo-cli
+cd todo-cli-app
 npm install
-npm link  #enables `todo` command globally
-```
+npm link  # Enables `todo` command globally
+````
 
 ---
-```
 
 ## Usage
 
@@ -44,60 +47,72 @@ todo --help
 
 ### `todo add <description>`
 
-**Alias:** `a`
-**Adds a new task to your to-do list.**
+Alias: `a`
+Adds a new task to your to-do list.
 
 ```bash
 todo add "Buy groceries"
 ```
 
+---
+
 ### `todo list`
 
-**Alias:** `l`
-**Displays all tasks with index and completion status.**
+Alias: `l`
+Displays all tasks with index and completion status.
 
 ```bash
 todo list
 ```
 
+---
+
 ### `todo complete <identifier>`
 
-**Alias:** `c`
-**Marks the task with the given number as completed.**
+Alias: `c`
+Marks the task with the given number as completed.
 
 ```bash
 todo complete 2
 ```
 
+---
+
 ### `todo remove <identifier>`
 
-**Alias:** `rm`
-**Removes the task with the given number from the list.**
+Alias: `rm`
+Removes the task with the given number from the list.
 
 ```bash
 todo remove 1
 ```
 
+---
+
 ### `todo clear`
 
-**Alias:** `clr`
-**Removes all tasks from the list.**
+Alias: `clr`
+Removes all tasks from the list.
 
 ```bash
 todo clear
 ```
 
+---
+
 ### `todo --help`
 
-**Displays usage information and help text.**
+Displays usage information and help text.
 
 ```bash
 todo help
 ```
 
+---
+
 ### `todo --version`
 
-**Prints the version number of the CLI app.**
+Prints the version number of the CLI app.
 
 ```bash
 todo --version
@@ -108,3 +123,11 @@ todo --version
 ## Screenshot
 
 ![todo-screenshot](img/todo.png)
+
+---
+
+```
+
+
+```
+
