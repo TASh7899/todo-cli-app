@@ -26,106 +26,23 @@ npm install
 npm link  # Enables `todo` command globally
 
 ---
+### Commands 
 
-## Usage
-
-```bash
-todo <command> [options]
-```
-
-To view all available commands and options:
-
-```bash
-todo --help
-```
-
----
-
-## Available Commands
-
-### `todo add <description>`
-
-Alias: `a`
-Adds a new task to your to-do list.
-
-```bash
-todo add "Buy groceries"
-```
-
----
-
-### `todo list`
-
-Alias: `l`
-Displays all tasks with index and completion status.
-
-```bash
-todo list
-```
-
----
-
-### `todo complete <identifier>`
-
-Alias: `c`
-Marks the task with the given number as completed.
-
-```bash
-todo complete 2
-```
-
----
-
-### `todo remove <identifier>`
-
-Alias: `rm`
-Removes the task with the given number from the list.
-
-```bash
-todo remove 1
-```
-
----
-
-### `todo clear`
-
-Alias: `clr`
-Removes all tasks from the list.
-
-```bash
-todo clear
-```
-
----
-
-### `todo --help`
-
-Displays usage information and help text.
-
-```bash
-todo help
-```
-
----
-
-### `todo --version`
-
-Prints the version number of the CLI app.
-
-```bash
-todo --version
-```
-
----
-
-## Screenshot
-
-![todo-screenshot](img/todo.png)
-
----
+todo <command>
 
 ```
-
-
 ```
+Commands:
+  todo tasklist               print all task lists                 [aliases: tl]
+  todo add <description>      adds a new task                       [aliases: a]
+  todo list                   list all tasks                        [aliases: l]
+  todo complete <identifier>  mark a task complete by number}       [aliases: c]
+  todo remove <identifier>    remove task from list                [aliases: rm]
+  todo clear                  remove all tasks                    [aliases: clr]
 
+Options:
+      --version  Show version number                                   [boolean]
+  -l, --list     Name of the task file             [string] [default: "default"]
+      --help     Show help                                             [boolean]
+```
+```
