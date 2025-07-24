@@ -28,10 +28,9 @@ npm link  # Enables `todo` command globally
 ---
 ### Commands 
 
+```
+```
 todo <command>
-
-```
-```
 Commands:
   todo tasklist               print all task lists                 [aliases: tl]
   todo add <description>      adds a new task                       [aliases: a]
@@ -44,5 +43,4 @@ Options:
       --version  Show version number                                   [boolean]
   -l, --list     Name of the task file             [string] [default: "default"]
       --help     Show help                                             [boolean]
-```
 ```
