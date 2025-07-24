@@ -24,7 +24,8 @@ git clone https://github.com/TASh7899/todo-cli-app.git
 cd todo-cli-app
 npm install
 npm link  # Enables `todo` command globally
-
+```
+```
 ---
 ### Commands 
 
