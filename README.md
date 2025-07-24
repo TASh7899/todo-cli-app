@@ -25,14 +25,12 @@ cd todo-cli-app
 npm install
 npm link  # Enables `todo` command globally
 ```
-```
 
 ---
 
 ### Commands
 
-```
-```
+```bash
 todo <command>
 Commands:
   todo tasklist               print all task lists                 [aliases: tl]
