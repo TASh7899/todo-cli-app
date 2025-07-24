@@ -44,7 +44,7 @@ yargs(hideBin(process.argv))
     default: 'default'
   })
   .command({
-    command: 'lists',
+    command: 'tasklist',
     aliases: ['tl'],
     describe: 'print all task lists',
     builder: () => {},
