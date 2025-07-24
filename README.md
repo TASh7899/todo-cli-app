@@ -26,8 +26,10 @@ npm install
 npm link  # Enables `todo` command globally
 ```
 ```
+
 ---
-### Commands 
+
+### Commands
 
 ```
 ```
